@@ -1,0 +1,178 @@
+MDScreen:
+    name: 'home'
+    md_bg_color: "#fff7b5"
+
+    MDTopAppBar:
+        type: "small"
+        pos_hint: {"top": 1}
+        
+        MDTopAppBarLeadingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "menu"
+                on_release: nav_drawer.set_state("toggle")
+                
+        MDTopAppBarTitle:
+            text: "Cafeteria"
+            pos_hint: {"center_x": .5}
+            
+        MDTopAppBarTrailingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "account-circle-outline"
+    
+    MDCard:
+        style: 'filled'
+        theme_bg_color: "Custom"
+        md_bg_color: '#ffd7b5'
+        pos_hint: {'center_x': .5, 'center_y': .75}
+        size_hint: .95, .25
+        radius: dp(10)
+
+        FitImage:
+            source: './images/dt.jpg'
+            pos_hint: {"top": 1}
+            radius: dp(10)
+
+    MDLabel:
+        text: "Favorites"
+        theme_font_name: "Custom"
+        font_name: 'BPoppins'
+        theme_font_size: "Custom"
+        font_size: "14sp"
+        color: "black" 
+        halign: 'center'
+        pos_hint: {'center_x': .14, 'center_y': .59}
+        bold: True
+    MDIconButton:
+        icon: 'arrow-right'
+        pos_hint: {'center_x': .9, 'center_y': .59}
+        theme_text_color: 'Custom'
+        text_color: 'black'
+        theme_font_size: "Custom"
+        font_size: "20dp"
+
+    ScrollView:
+        do_scroll_y: False
+        do_scroll_x: True
+        size_hint_y: .3
+        bar_width: 0
+        pos_hint: {'center_x': .5, 'center_y': .45}
+
+        MDGridLayout:
+            rows: 1
+            size_hint: None, None
+            spacing: 5
+            pos_hint: {'center_x': .1}
+            height: self.minimum_height
+            width: self.minimum_width
+
+            MDCard:
+                style: 'filled'
+                theme_bg_color: "Custom"
+                md_bg_color: '#ffd7b5'
+                size_hint: .25, .25
+                radius: dp(10)
+
+                FitImage:
+                    source: './images/dt.jpg'
+                    pos_hint: {"top": 1}
+                    radius: dp(10)
+            MDCard:
+                style: 'filled'
+                theme_bg_color: "Custom"
+                md_bg_color: '#ffd7b5'
+                size_hint: .25, .25
+                radius: dp(10)
+
+                FitImage:
+                    source: './images/dt.jpg'
+                    pos_hint: {"top": 1}
+                    radius: dp(10)
+            MDCard:
+                style: 'filled'
+                theme_bg_color: "Custom"
+                md_bg_color: '#ffd7b5'
+                size_hint: .25, .25
+                radius: dp(10)
+
+                FitImage:
+                    source: './images/dt.jpg'
+                    pos_hint: {"top": 1}
+                    radius: dp(10)
+            MDCard:
+                style: 'filled'
+                theme_bg_color: "Custom"
+                md_bg_color: '#ffd7b5'
+                size_hint: .25, .25
+                radius: dp(10)
+
+                FitImage:
+                    source: './images/dt.jpg'
+                    pos_hint: {"top": 1}
+                    radius: dp(10)
+            MDCard:
+                style: 'filled'
+                theme_bg_color: "Custom"
+                md_bg_color: '#ffd7b5'
+                size_hint: .25, .25
+                radius: dp(10)
+
+                FitImage:
+                    source: './images/dt.jpg'
+                    pos_hint: {"top": 1}
+                    radius: dp(10)
+    MDNavigationLayout:                
+        MDNavigationDrawer:
+            id: nav_drawer
+            radius: [0, 10, 10, 0]                
+            MDNavigationDrawerMenu:
+                MDNavigationDrawerLabel:
+                    text: "Mail"
+                
+                MDNavigationDrawerItem:
+                    height: dp(40)
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "account"
+                    MDNavigationDrawerItemText:
+                        text: "Inbox"
+                    MDNavigationDrawerItemTrailingText:
+                        text: "24"
+                
+                MDNavigationDrawerDivider:                
+                
+                MDNavigationDrawerItem:
+                    height: dp(40)
+                    border_margin: dp(24)
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "account"
+                    MDNavigationDrawerItemText:
+                        text: "Inbox"
+                    MDNavigationDrawerItemTrailingText:
+                        text: "24"
+                
+                MDNavigationDrawerItem:
+                    border_margin: dp(24)
+                    height: dp(40)
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "account"
+                    MDNavigationDrawerItemText:
+                        text: "Inbox"
+                    MDNavigationDrawerItemTrailingText:
+                        text: "24"
+                MDNavigationDrawerItem:
+                    height: dp(40)
+                    border_margin: dp(24)
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "account"
+                    MDNavigationDrawerItemText:
+                        text: "Inbox"
+                    MDNavigationDrawerItemTrailingText:
+                        text: "24"
+                MDNavigationDrawerItem:
+                    height: dp(40)
+                    border_margin: dp(24)
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "account"
+                    MDNavigationDrawerItemText:
+                        text: "Inbox"
+                    MDNavigationDrawerItemTrailingText:
+                        text: "24"

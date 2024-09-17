@@ -1,0 +1,176 @@
+MDScreen:
+    name: "signup"
+
+    MDFloatLayout:
+        md_bg_color: 1, 0.67, 0.1
+
+        # The left arrow
+        MDIconButton:
+            icon: "arrow-left"
+            style: 'standard'
+            pos_hint: {"center_y": .95}
+            theme_icon_color: "Custom"
+            icon_color: 'white'
+            theme_font_size: "Custom"
+            font_size: "22sp"
+            
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main"
+        
+        # text
+        MDLabel:
+            text: "H i !"
+            theme_font_name: "Custom"
+            font_name: "BPoppins"
+            pos_hint: {'center_x': .6, 'center_y': .87}
+            color: rgba(0, 0, 59, 255)
+            theme_font_size: "Custom"
+            font_size: "26sp" 
+        
+        MDLabel:
+            text: "Create a new account"
+            pos_hint: {"center_x": .6, "center_y": .81}
+            theme_font_name: "Custom"
+            font_name: "MPoppins"
+            theme_font_size: "Custom"
+            font_size: "18sp"
+            color: rgba(133, 133, 193, 255)
+        
+        MDFloatLayout:
+            size_hint: .78, .07
+            pos_hint: {"center_x": .5, "center_y": .68}
+            
+            MDTextField:
+                mode: 'outlined'
+                size_hint_x: 1
+                size_hint_y: None
+                height: "35dp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                
+                MDTextFieldLeadingIcon:
+                    icon: "account"
+                    theme_icon_color: "Custom"
+                    icon_color_normal: "black"
+                
+                MDTextFieldHintText:
+                    text: "Username"
+        
+        # Email Text Field
+        MDFloatLayout:
+            size_hint: .78, .07
+            pos_hint: {"center_x": .5, "center_y": .54}    
+
+            MDTextField:
+                mode: 'outlined'
+                size_hint_x: 1
+                pos_hint: {"center_x": .5, "center_y": .5}
+                
+                MDTextFieldLeadingIcon:
+                    icon: "email"
+                    theme_icon_color: "Custom"
+                    icon_color_normal: "black"
+                
+                MDTextFieldHintText:
+                    text: "Email"
+                
+                MDTextFieldHelperText:
+                    text: 'username@gmail.com'
+         
+        # password Text Field
+        MDFloatLayout:
+            size_hint: .78, .07
+            pos_hint: {"center_x": .5, "center_y": .4}    
+
+            MDTextField:
+                mode: 'outlined'
+                size_hint_x: 1
+                password: True
+                pos_hint: {"center_x": .5, "center_y": .5}
+                
+                MDTextFieldLeadingIcon:
+                    icon: "lock"
+                    theme_icon_color: "Custom"
+                    icon_color_normal: "black"
+                
+                MDTextFieldHintText:
+                    text: "Password"
+        
+        # signup Button
+        MDButton:
+            style: 'tonal'
+            background_color: 255, 172, 28, 0
+            radius: [8]
+            theme_bg_color: "Custom"
+            md_bg_color: "#FFF5EE"
+            theme_width: "Custom"
+            size_hint_x: .78
+            pos_hint: {"center_x": .5, "center_y": .28}
+            on_release:
+                app.root.transition.direction = "right"
+                app.root.current = "login"
+                            
+            MDButtonText:
+                text: "Sign Up"
+                pos_hint: {"center_x": .5, "center_y": .5}
+        
+        MDLabel:
+            text: 'or'
+            color: rgba(52, 0, 231, 255)
+            pos_hint: {'center_y': .22}
+            font_size: '13sp'
+            font_name: 'BPoppins'
+            halign: 'center'
+        
+        MDFloatLayout:
+            md_bg_color: rgba(178, 178, 178, 255)
+            size_hint: .3, .002
+            pos_hint: {'center_x': .3, 'center_y': .22}
+        
+        MDFloatLayout:
+            md_bg_color: rgba(178, 178, 178, 255)
+            size_hint: .3, .002
+            pos_hint: {'center_x': .7, 'center_y': .22}
+
+        MDLabel:
+            text: "Social Media Login"
+            font_name: "BPoppins"
+            font_size: "13sp"
+            halign: "center"
+            pos_hint: {'center_y': .17}
+            color: rgba(135, 133, 193, 255)
+        
+        MDGridLayout:
+            cols: 3
+            size_hint: .48, .07
+            pos_hint: {"center_x": .5, "center_y": .11}
+            Image:
+                source: "./images/fb.png"
+            Image:
+                source: "./images/goog.png"
+            Image:
+                source: "./images/twitter.png"
+        
+        MDLabel:
+            text: "Already have account?"
+            font_name: "BPoppins"
+            font_size: "11sp"
+            pos_hint: {"center_x": .68, "center_y": .05}
+            color: rgba(135, 133, 193, 255)
+        
+
+        MDButton:
+            style: 'text'
+            pos_hint: {"center_x": .76, "center_y": .052}
+            on_release:
+                app.root.transition.direction = "left"
+                app.root.current = "login"
+                            
+            MDButtonText:
+                text: "Login"
+                color: rgba(135, 133, 193, 255)
+                font_name: "BPoppins"
+                font_size: "11sp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+

@@ -1,0 +1,144 @@
+MDScreen:
+    name: 'profile'
+    md_bg_color: "#ffd7b5"
+
+    MDFloatLayout:    
+        ProfileCard:
+            size_hint_y: .65
+            pos_hint: {"center_y": .7}
+            elevation: 6
+            shadow_softness: 4
+            shadow_offset: (0, 2)
+            md_bg_color: 246, 250, 255, 1
+            radius: [0, 0, 20, 20]
+            
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint: {"center_y": .91, "center_x": .08}
+                theme_text_color: "Custom"
+                text_color: 71, 92, 119, 1
+                
+            MDIconButton:
+                icon: "dots-vertical"
+                pos_hint: {"center_y": .91, "center_x": .93}
+                theme_text_color: "Custom"
+                text_color: 71/255, 92/255, 119/255, 1
+            
+            MDLabel:
+                text: "My Profile"
+                theme_font_name: "Custom"
+                font_name: 'BPoppins'
+                theme_font_size: "Custom"
+                font_size: "20sp"
+                pos_hint: {'center_x': .56, 'center_y': .82}
+                color: rgba(71, 92, 119, 255)
+            
+            FitImage:
+                source: "./images/tyy.png"
+                pos_hint: {"center_x": .5, "center_y": .62}
+                size_hint: None, None
+                size: 100, 100
+                radius: dp(50)
+            MDLabel:
+                text: "Dev Inno"
+                theme_font_name: "Custom"
+                font_name: 'BPoppins'
+                halign: "center"
+                pos_hint: {'center_y': .44}
+                color: rgba(71, 92, 119, 255)
+
+            MDLabel:
+                text: "Mobile App Engineer | KivyMD | Python"
+                theme_font_name: "Custom"
+                font_name: 'MPoppins'
+                theme_font_size: "Custom"
+                font_size: "12sp"
+                halign: "center"
+                pos_hint: {'center_y': .36}
+                color: rgba(188, 202, 228, 255)
+            
+            MDLabel:
+                text: "Lira, UGANDA"
+                theme_font_name: "Custom"
+                font_name: 'MPoppins'
+                theme_font_size: "Custom"
+                font_size: "12sp"
+                halign: "center"
+                pos_hint: {'center_y': .3}
+                color: rgba(188, 202, 228, 255)
+            
+            MDGridLayout:
+                rows: 2
+                cols: 3
+                size_hint: .8, .12
+                pos_hint: {'center_x': .5, 'center_y': .15}
+
+                MDLabel:
+                    text: "photos"
+                    theme_font_name: "Custom"
+                    font_name: 'MPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "12sp"
+                    halign: "center"
+                    color: rgba(188, 202, 228, 255)
+                
+                MDLabel:
+                    text: "Followers"
+                    theme_font_name: "Custom"
+                    font_name: 'MPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "12sp"
+                    halign: "center"
+                    color: rgba(188, 202, 228, 255)
+
+                MDLabel:
+                    text: "Follows"
+                    theme_font_name: "Custom"
+                    font_name: 'BPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "12sp"
+                    halign: "center"
+                    color: rgba(188, 202, 228, 255)
+                
+                MDLabel:
+                    text: "107"
+                    theme_font_name: "Custom"
+                    font_name: 'BPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "14sp"
+                    halign: "center"
+                    color: rgba(71, 92, 119, 255)
+            
+                MDLabel:
+                    text: "43k"
+                    theme_font_name: "Custom"
+                    font_name: 'BPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "14sp"
+                    halign: "center"
+                    color: rgba(71, 92, 119, 255)
+            
+                MDLabel:
+                    text: "56"
+                    theme_font_name: "Custom"
+                    font_name: 'MPoppins'
+                    theme_font_size: "Custom"
+                    font_size: "14sp"
+                    halign: "center"
+                    color: rgba(71, 92, 119, 255)
+    FitImage:
+        source: './images/dd.jpg'
+        size_hint: .35, .35
+        radius: 8
+        pos_hint: {'center_x': .26, 'center_y': .185}
+    FitImage:
+        source: './images/dt.jpg'
+        size_hint: .35, .16
+        radius: 8 
+        pos_hint: {'center_x': .68, 'center_y': .28}
+    FitImage:
+        source: './images/image12.jpg'
+        size_hint: .35, .16
+        radius: 8 
+        pos_hint: {'center_x': .68, 'center_y': .09}
+            

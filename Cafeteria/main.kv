@@ -1,0 +1,77 @@
+MDScreen:
+    name: "main"
+    MDFloatLayout:
+        md_bg_color: 1, 0.67, 0.1
+        # this is the logo
+        Image:
+            source: "./images/imagescafe-removebg-preview.png"
+            pos_hint: {"center_x": .18, "center_y": .92}
+            size_hint: .40, .40
+        
+        # this is the welcome image
+        Image:
+            source: "./images/removbg/about-img.png"
+            pos_hint: {"center_x": .5, "center_y": .65}
+            size_hint: .5, .3
+        
+        # text
+        MDLabel:
+            text: "H e l l o !"
+            pos_hint: {"center_y": .4}
+            halign: "center"
+            bold: True
+            theme_font_name: "Custom"
+            font_name: "BPoppins"
+            color: rgba(34, 34, 34, 255)
+            theme_font_style: "Custom"
+            font_style: "Display"
+            role: "small"
+            
+        MDLabel:
+            text: "Share a very Delightfull experience full of enjoyable moments"
+            size_hint_x: .85
+            pos_hint: {"center_x": .5, "center_y": .32}
+            halign: "center"
+            theme_font_name: "Custom"
+            font_name: "MPoppins"
+            theme_font_size: "Custom"
+            font_size: "14sp"
+            color: rgba(127, 127, 127, 255)
+
+        #Login Button
+        MDButton:
+            style: 'tonal'
+            background_color: 255, 172, 28, 0
+            radius: [8]
+            theme_bg_color: "Custom"
+            md_bg_color: "#FFF5EE"
+            theme_width: "Custom"
+            size_hint_x: .6
+            pos_hint: {"center_x": .5, "center_y": .21}
+            on_release:
+                app.root.transition.direction = "left"
+                app.root.current = "login"
+                            
+            MDButtonText:
+                text: "Login"
+                pos_hint: {"center_x": .5, "center_y": .5}
+        
+         # including a signup Button
+        MDButton:
+            style: 'outlined'
+            background_color: 1, .4, 0, 0
+            radius: [8]
+            theme_width: "Custom"
+            size_hint_x: .6
+            pos_hint: {"center_x": .5, "center_y": .12}
+            on_release:
+                app.root.transition.direction = "left"
+                app.root.current = "signup"
+                            
+            MDButtonText:
+                text: "Sign Up"
+                theme_text_color: "Custom"
+                text_color: "#ffffff"
+                pos_hint: {"center_x": .5, "center_y": .5}
+            
+                    

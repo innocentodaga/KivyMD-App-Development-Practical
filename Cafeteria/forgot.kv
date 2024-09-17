@@ -1,0 +1,105 @@
+MDScreen:
+    name: "forgot"
+    MDFloatLayout:
+        md_bg_color: 1, 0.67, 0.1
+
+        # The left arrow
+        MDIconButton:
+            icon: "arrow-left"
+            style: 'standard'
+            pos_hint: {"center_y": .95}
+            theme_icon_color: "Custom"
+            icon_color: 'white'
+            theme_font_size: "Custom"
+            font_size: "22dp"
+            
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main"
+        
+        Image:
+            source: "./images/imagescafe-removebg-preview.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            size_hint: .40, .40
+        
+        # text
+        MDLabel:
+            text: "R e c o v e r !"
+            theme_font_name: "Custom"
+            font_name: "BPoppins"
+            pos_hint: {'center_x': .6, 'center_y': .67}
+            color: rgba(0, 0, 59, 255)
+            theme_font_size: "Custom"
+            font_size: "26sp" 
+        
+        MDLabel:
+            text: "Enter Email to Recover Password"
+            pos_hint: {"center_x": .6, "center_y": .6}
+            theme_font_name: "Custom"
+            font_name: "MPoppins"
+            theme_font_size: "Custom"
+            font_size: "15sp"
+            color: rgba(133, 133, 193, 255)
+
+        MDFloatLayout:
+            size_hint: .78, .07
+            pos_hint: {"center_x": .5, "center_y": .5}
+            
+            MDTextField:
+                mode: 'outlined'
+                size_hint_x: 1
+                size_hint_y: None
+                height: "35dp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                
+                MDTextFieldLeadingIcon:
+                    icon: "email"
+                    theme_icon_color: "Custom"
+                    icon_color_normal: "black"
+                
+                MDTextFieldHintText:
+                    text: "Email"
+                
+                MDTextFieldHelperText:
+                    text: 'username@gmail.com'
+
+        # Login Button
+        MDButton:
+            style: 'tonal'
+            background_color: 255, 172, 28, 0
+            radius: [8]
+            theme_bg_color: "Custom"
+            md_bg_color: "#FFF5EE"
+            theme_width: "Custom"
+            size_hint_x: .78
+            pos_hint: {"center_x": .5, "center_y": .37}
+            on_release:
+                app.root.transition.direction = "left"
+                app.root.current = "login"
+                            
+            MDButtonText:
+                text: "Send Code"
+                pos_hint: {"center_x": .5, "center_y": .5}
+            
+        MDLabel:
+            text: "Already have an account?"
+            font_name: "BPoppins"
+            font_size: "11sp"
+            pos_hint: {"center_x": .64, "center_y": .27}
+            color: rgba(135, 133, 193, 255)
+
+        MDButton:
+            style: 'text'
+            pos_hint: {"center_x": .78, "center_y": .27}
+            on_release:
+                app.root.transition.direction = "right"
+                app.root.current = "login"
+                            
+            MDButtonText:
+                text: "Login"
+                color: rgba(135, 133, 193, 255)
+                font_name: "BPoppins"
+                font_size: "11sp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+
